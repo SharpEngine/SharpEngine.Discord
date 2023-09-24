@@ -2,7 +2,4 @@ using SharpEngine.Core;
 
 namespace Testing;
 
-public class MyScene: Scene
-{
-    
-}
+public class MyScene : Scene { }

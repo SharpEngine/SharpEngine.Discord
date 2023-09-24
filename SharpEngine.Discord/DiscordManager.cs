@@ -14,23 +14,25 @@ public static class DiscordManager
     public static void Init(string clientId, RichPresence presence)
     {
         DiscordRpcClient = new DiscordRpcClient(clientId);
-        
+
         DiscordRpcClient.OnReady += OnReady;
         DiscordRpcClient.OnPresenceUpdate += OnPresenceUpdate;
 
         DiscordRpcClient.Initialize();
-        
+
         DiscordRpcClient.SetPresence(presence);
     }
 
     private static void OnPresenceUpdate(object sender, PresenceMessage args)
     {
-        DebugManager.Log(LogLevel.LogInfo, $"DISCORD: Update Presence : {JsonSerializer.Serialize(args.Presence)}");
+        DebugManager.Log(
+            LogLevel.LogInfo,
+            $"DISCORD: Update Presence : {JsonSerializer.Serialize(args.Presence)}"
+        );
     }
 
     private static void OnReady(object sender, ReadyMessage args)
     {
         DebugManager.Log(LogLevel.LogInfo, $"DISCORD: Ready from user : {args.User.Username}");
     }
-    
 }
