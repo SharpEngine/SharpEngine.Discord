@@ -11,19 +11,28 @@ internal static class Program
     private static void Main()
     {
         SEDiscord.AddVersions();
-        
-        DiscordManager.Init("734562497092255774", new RichPresence
-        {
-            State = "Essaye SharpEngine.Discord"
-        });
-        
-        var window = new Window(1280, 920, "SE Aether Physics", Color.CornflowerBlue, null, true, true, true)
+
+        DiscordManager.Init(
+            "734562497092255774",
+            new RichPresence { State = "Essaye SharpEngine.Discord" }
+        );
+
+        var window = new Window(
+            1280,
+            920,
+            "SE Aether Physics",
+            Color.CornflowerBlue,
+            null,
+            true,
+            true,
+            true
+        )
         {
             RenderImGui = DebugManager.CreateSeImGuiWindow
         };
-        
+
         window.AddScene(new MyScene());
-        
+
         window.Run();
     }
 }
