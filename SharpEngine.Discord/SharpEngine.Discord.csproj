@@ -26,6 +26,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
-    <PackageReference Include="SharpEngine.Core" Version="1.2.2" />
+    <PackageReference Include="SharpEngine.Core" Version="1.9.3" />
   </ItemGroup>
 </Project>

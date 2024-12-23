@@ -20,16 +20,13 @@ internal static class Program
         var window = new Window(
             1280,
             920,
-            "SE Aether Physics",
+            "SE Discord",
             Color.CornflowerBlue,
             null,
             true,
             true,
             true
-        )
-        {
-            RenderImGui = DebugManager.CreateSeImGuiWindow
-        };
+        );
 
         window.AddScene(new MyScene());
 

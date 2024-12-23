@@ -7,10 +7,18 @@ using LogLevel = SharpEngine.Core.Utils.LogLevel;
 
 namespace SharpEngine.Discord;
 
+/// <summary>
+/// Manager for Discord RPC
+/// </summary>
 public static class DiscordManager
 {
     private static DiscordRpcClient DiscordRpcClient { get; set; } = null!;
 
+    /// <summary>
+    /// Initialize Discord RPC
+    /// </summary>
+    /// <param name="clientId">Id Client</param>
+    /// <param name="presence">Rich Presence</param>
     public static void Init(string clientId, RichPresence presence)
     {
         DiscordRpcClient = new DiscordRpcClient(clientId);
