@@ -11,12 +11,12 @@ internal class DiscordLogger : ILogger
 
     public void Warning(string message, params object[] args) =>
         DebugManager.Log(
-            Core.Utils.LogLevel.LogWarning,
+            Core.Utils.LogLevel.Warning,
             "DISCORD: " + string.Format(message, args)
         );
 
     public void Error(string message, params object[] args) =>
-        DebugManager.Log(Core.Utils.LogLevel.LogError, "DISCORD: " + string.Format(message, args));
+        DebugManager.Log(Core.Utils.LogLevel.Error, "DISCORD: " + string.Format(message, args));
 
     public LogLevel Level { get; set; }
 }

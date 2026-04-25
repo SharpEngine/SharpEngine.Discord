@@ -12,7 +12,7 @@ public static class SEDiscord
     /// </summary>
     public static void AddVersions()
     {
-        DebugManager.Versions.Add("DiscordRichPresence", "1.2.1.24");
-        DebugManager.Versions.Add("SharpEngine.Discord", "1.1.0");
+        DebugManager.Versions.Add("DiscordRichPresence", "1.6.1.70");
+        DebugManager.Versions.Add("SharpEngine.Discord", "1.2.0");
     }
 }

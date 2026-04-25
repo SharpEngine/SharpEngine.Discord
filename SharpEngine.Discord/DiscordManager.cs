@@ -34,13 +34,13 @@ public static class DiscordManager
     private static void OnPresenceUpdate(object sender, PresenceMessage args)
     {
         DebugManager.Log(
-            LogLevel.LogInfo,
+            LogLevel.Info,
             $"DISCORD: Update Presence : {JsonSerializer.Serialize(args.Presence)}"
         );
     }
 
     private static void OnReady(object sender, ReadyMessage args)
     {
-        DebugManager.Log(LogLevel.LogInfo, $"DISCORD: Ready from user : {args.User.Username}");
+        DebugManager.Log(LogLevel.Info, $"DISCORD: Ready from user : {args.User.Username}");
     }
 }
